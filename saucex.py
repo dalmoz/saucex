@@ -1,4 +1,3 @@
-
 __author__ = 'zimoshe-AT-gmail.com (Moshe Zioni, aka dalmoz)'
 
 from sys import argv
@@ -10,11 +9,11 @@ from apiclient.discovery import build
 
 def main():
   service = build("customsearch", "v1",
-            #developerKey="AIzaSyD7YAi0R8Gb3rFtcoqeLHlLO2cAARCvHyc") #ect
-  		developerKey="AIzaSyBRR8MtLJEId8QLjp5MUTgDnl0Hu1AXWgQ") #ome
+			developerKey="enterYours") #ome
 
   #print argv[1]
-  typez=['asp','aspx','jsp','java','php','rb','py','pdf','old','back','bak','bac','tmp']
+  #proto typez=['asp','aspx','jsp','java','php','rb','py','pdf','old','back','bak','bac','tmp']
+  typez=['asp','aspx','jsp','java','pdf','old','back','bak','bac','tmp']
   suffz=['1','2','3','4','5','6','7','8','9','11','old','back','bac','bak','tmp','temp']
   for t in typez:
 	filetype = ''
@@ -24,7 +23,8 @@ def main():
 	#print "SEARCH: " + filetype # PRDEBUG
 	res = service.cse().list(
 	 q=filetype,
-	 cx='017840724651753821015:nynktvpa53k',
+	 #cx is wonga.com
+	 cx='017840724651753821015:nrkcgipytkk', 
 	  ).execute()
 		  #print str(sys.argv)
 		  #print(json.dumps(res['searchInformation', ['totalResults']], indent=1))
