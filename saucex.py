@@ -23,7 +23,7 @@ def main():
 	#print "SEARCH: " + filetype # PRDEBUG
 	res = service.cse().list(
 	 q=filetype,
-	 #cx is wonga.com
+	 #cx is wng token
 	 cx='017840724651753821015:nrkcgipytkk', 
 	  ).execute()
 		  #print str(sys.argv)
